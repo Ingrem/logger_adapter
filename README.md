@@ -1,16 +1,16 @@
 # logger
 
-## Описание
+## Description
 
-Модуль позволяющий логгировать сообщения в файл, консоль, logstash и redis pubsub.
+A module that allows you to log messages to a file, console, logstash and redis pubsub.
 
-По умолчанию включено только логгирование в консоль.
+By default, only console logging is enabled.
 
-Для того, чтобы включить логгирование в redis pubsub, logstash, файл после инициализации объекта логгера необходимо вызвать методы с параметрами вывода.
+In order to enable logging in the redis pubsub, logstash, file after initializing the logger object, you must call methods with output parameters.
 
-Для логирования в redis pubsub, необходимо дополнительно установить библиотеку redis.
+To log in redis pubsub, you must additionally install the redis library.
 
-## Пример работы:
+## Example of work:
 ```python
 from log.app import Logger
 
@@ -26,19 +26,19 @@ logger.error('Error message')
 logger.metric('Metric message', query_time=100, queue_size=200)
 ```
 
-## Рекомендации
+## Recommendations
 
-Рекомендуется инициализировать объект логгера один раз во всём проекте, и далее импортировать сам объект.
+It is recommended to initialize the logger object once in the entire project, and then import the object itself.
 
-## Варианты установки и обновления
+## Installation and update options
 
 ```
-Для использования проекта необходимо прописать в системе и гите ssh-ключ.
+To use the project, you need to register an ssh key in the system and git.
 
-Для обновления модуля: pip install --upgrade git+ssh://git@gitadress.com/qa/logger.git
+Module update: pip install --upgrade git+ssh://git@gitadress.com/qa/logger.git
 
-Для установки (обновления) модуля из конкретной ветки: pip install (--upgrade) git+ssh://git@gitadress.com/qa/logger.git@branch_name
+To install (update) a module from a specific branch: pip install (--upgrade) git+ssh://git@gitadress.com/qa/logger.git@branch_name
 
-Для установки конкретного пакета используйте eggs: pip install git+ssh://git@gitadress.com/qa/logger.git@branch_name#egg=logger
+To install a specific package use eggs: pip install git+ssh://git@gitadress.com/qa/logger.git@branch_name#egg=logger
 
 ```
